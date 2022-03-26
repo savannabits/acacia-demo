@@ -1,2 +1,2 @@
 - ## Get Started
-    - [Overview](/{{route}}/{{version}}/overview)
+    - [Overview](/{{route}}/{{version}}/getting-started/overview)

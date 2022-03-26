@@ -1,0 +1,3 @@
+[submodule "resources/docs/main"]
+	path = resources/docs/main
+	url = git@github.com:savannabits/acacia-docs.git
