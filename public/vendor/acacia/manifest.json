@@ -1,6 +1,6 @@
 {
   "Core/Js/main.ts": {
-    "file": "assets/main.c1ab80d6.js",
+    "file": "assets/main.9bcf22d5.js",
     "src": "Core/Js/main.ts",
     "isEntry": true,
     "imports": [
@@ -339,7 +339,7 @@
       "Core/Js/Pages/GPanel/Schematics/components/Relationships.vue"
     ],
     "css": [
-      "assets/main.c6abc49e.css"
+      "assets/main.12ab1d83.css"
     ],
     "assets": [
       "assets/roboto-v20-latin-ext_latin-regular.b86b128b.woff2",
@@ -359,7 +359,7 @@
     "file": "assets/vendor.05df324e.js"
   },
   "AcaciaFields/Js/Pages/Create.vue": {
-    "file": "assets/Create.c68f868c.js",
+    "file": "assets/Create.8c8fe3a9.js",
     "src": "AcaciaFields/Js/Pages/Create.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -395,7 +395,7 @@
     ]
   },
   "Core/Js/Layouts/Backend.vue": {
-    "file": "assets/Backend.5aa1bcce.js",
+    "file": "assets/Backend.6e087c50.js",
     "src": "Core/Js/Layouts/Backend.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -450,7 +450,7 @@
     ]
   },
   "Core/Js/partials/Sidebar.vue": {
-    "file": "assets/Sidebar.eaa3bc39.js",
+    "file": "assets/Sidebar.9fa42cf7.js",
     "src": "Core/Js/partials/Sidebar.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -459,7 +459,7 @@
       "_plugin-vue_export-helper.21dcd24c.js"
     ],
     "assets": [
-      "assets/logo.d3405e2c.png"
+      "assets/logo.7ac4020d.svg"
     ]
   },
   "Core/Js/partials/Header.vue": {
@@ -657,7 +657,7 @@
     "file": "assets/user-avatar-32.07bf604b.js"
   },
   "AcaciaFields/Js/Pages/Edit.vue": {
-    "file": "assets/Edit.db1d0b0c.js",
+    "file": "assets/Edit.20ed40b2.js",
     "src": "AcaciaFields/Js/Pages/Edit.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -709,7 +709,7 @@
     ]
   },
   "AcaciaFields/Js/Pages/Index.vue": {
-    "file": "assets/Index.daccd2fb.js",
+    "file": "assets/Index.038660db.js",
     "src": "AcaciaFields/Js/Pages/Index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -878,7 +878,7 @@
     ]
   },
   "AcaciaFields/Js/Pages/Show.vue": {
-    "file": "assets/Show.fc961890.js",
+    "file": "assets/Show.c3b2e9d1.js",
     "src": "AcaciaFields/Js/Pages/Show.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -913,7 +913,7 @@
     ]
   },
   "AcaciaMenus/Js/Pages/Create.vue": {
-    "file": "assets/Create.1bd7524c.js",
+    "file": "assets/Create.3e81cc21.js",
     "src": "AcaciaMenus/Js/Pages/Create.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -961,7 +961,7 @@
     ]
   },
   "AcaciaMenus/Js/Pages/Edit.vue": {
-    "file": "assets/Edit.e855b167.js",
+    "file": "assets/Edit.43053f4a.js",
     "src": "AcaciaMenus/Js/Pages/Edit.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -1009,7 +1009,7 @@
     ]
   },
   "AcaciaMenus/Js/Pages/Index.vue": {
-    "file": "assets/Index.4692f675.js",
+    "file": "assets/Index.bc2e9031.js",
     "src": "AcaciaMenus/Js/Pages/Index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -1068,7 +1068,7 @@
     ]
   },
   "AcaciaMenus/Js/Pages/Show.vue": {
-    "file": "assets/Show.17b9836d.js",
+    "file": "assets/Show.150c4d7c.js",
     "src": "AcaciaMenus/Js/Pages/Show.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -1102,7 +1102,7 @@
     ]
   },
   "AcaciaRelationships/Js/Pages/Create.vue": {
-    "file": "assets/Create.b8850dd3.js",
+    "file": "assets/Create.3e724998.js",
     "src": "AcaciaRelationships/Js/Pages/Create.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -1154,7 +1154,7 @@
     ]
   },
   "AcaciaRelationships/Js/Pages/Edit.vue": {
-    "file": "assets/Edit.d0c4f676.js",
+    "file": "assets/Edit.fc333c6b.js",
     "src": "AcaciaRelationships/Js/Pages/Edit.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -1206,7 +1206,7 @@
     ]
   },
   "AcaciaRelationships/Js/Pages/Index.vue": {
-    "file": "assets/Index.5d23d529.js",
+    "file": "assets/Index.1a3b0ada.js",
     "src": "AcaciaRelationships/Js/Pages/Index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -1269,7 +1269,7 @@
     ]
   },
   "AcaciaRelationships/Js/Pages/Show.vue": {
-    "file": "assets/Show.055a1df3.js",
+    "file": "assets/Show.5a1e5248.js",
     "src": "AcaciaRelationships/Js/Pages/Show.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -1304,7 +1304,7 @@
     ]
   },
   "AcaciaSchematics/Js/Pages/Create.vue": {
-    "file": "assets/Create.e9e7eba7.js",
+    "file": "assets/Create.ac13e607.js",
     "src": "AcaciaSchematics/Js/Pages/Create.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -1366,7 +1366,7 @@
     ]
   },
   "AcaciaSchematics/Js/Pages/Edit.vue": {
-    "file": "assets/Edit.9760ae60.js",
+    "file": "assets/Edit.6e2b73d1.js",
     "src": "AcaciaSchematics/Js/Pages/Edit.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -1415,7 +1415,7 @@
     ]
   },
   "AcaciaSchematics/Js/Pages/Index.vue": {
-    "file": "assets/Index.c12dea31.js",
+    "file": "assets/Index.a6168d02.js",
     "src": "AcaciaSchematics/Js/Pages/Index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -1474,7 +1474,7 @@
     ]
   },
   "AcaciaSchematics/Js/Pages/Show.vue": {
-    "file": "assets/Show.24034632.js",
+    "file": "assets/Show.95a1f54b.js",
     "src": "AcaciaSchematics/Js/Pages/Show.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -1944,7 +1944,7 @@
     ]
   },
   "Permissions/Js/Pages/Create.vue": {
-    "file": "assets/Create.617b6cfa.js",
+    "file": "assets/Create.d16f9505.js",
     "src": "Permissions/Js/Pages/Create.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -1989,7 +1989,7 @@
     ]
   },
   "Permissions/Js/Pages/Edit.vue": {
-    "file": "assets/Edit.c6804679.js",
+    "file": "assets/Edit.02d4500e.js",
     "src": "Permissions/Js/Pages/Edit.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -2034,7 +2034,7 @@
     ]
   },
   "Permissions/Js/Pages/Index.vue": {
-    "file": "assets/Index.ef1939b1.js",
+    "file": "assets/Index.c4ac02cd.js",
     "src": "Permissions/Js/Pages/Index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -2092,7 +2092,7 @@
     ]
   },
   "Permissions/Js/Pages/Show.vue": {
-    "file": "assets/Show.aabb02fa.js",
+    "file": "assets/Show.41478636.js",
     "src": "Permissions/Js/Pages/Show.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -2126,7 +2126,7 @@
     ]
   },
   "Roles/Js/Pages/Create.vue": {
-    "file": "assets/Create.d9bec4af.js",
+    "file": "assets/Create.a5975ce5.js",
     "src": "Roles/Js/Pages/Create.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -2171,7 +2171,7 @@
     ]
   },
   "Roles/Js/Pages/Edit.vue": {
-    "file": "assets/Edit.a8ec55af.js",
+    "file": "assets/Edit.d3f6e7d1.js",
     "src": "Roles/Js/Pages/Edit.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -2237,7 +2237,7 @@
     ]
   },
   "Roles/Js/Pages/Index.vue": {
-    "file": "assets/Index.38aa9abd.js",
+    "file": "assets/Index.e03b2832.js",
     "src": "Roles/Js/Pages/Index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -2298,7 +2298,7 @@
     ]
   },
   "Roles/Js/Pages/Show.vue": {
-    "file": "assets/Show.dcb56fed.js",
+    "file": "assets/Show.8264a0ce.js",
     "src": "Roles/Js/Pages/Show.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -2333,7 +2333,7 @@
     ]
   },
   "Users/Js/Pages/Create.vue": {
-    "file": "assets/Create.a113853a.js",
+    "file": "assets/Create.f0bcbbc6.js",
     "src": "Users/Js/Pages/Create.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -2382,7 +2382,7 @@
     ]
   },
   "Users/Js/Pages/Edit.vue": {
-    "file": "assets/Edit.230cf580.js",
+    "file": "assets/Edit.72f5ab2e.js",
     "src": "Users/Js/Pages/Edit.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -2433,7 +2433,7 @@
     ]
   },
   "Users/Js/Pages/Index.vue": {
-    "file": "assets/Index.cc7d303b.js",
+    "file": "assets/Index.1b981f48.js",
     "src": "Users/Js/Pages/Index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -2494,7 +2494,7 @@
     ]
   },
   "Users/Js/Pages/Show.vue": {
-    "file": "assets/Show.5b22d131.js",
+    "file": "assets/Show.d193b5c2.js",
     "src": "Users/Js/Pages/Show.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -4211,7 +4211,7 @@
     ]
   },
   "Core/Js/Pages/Backend/Index.vue": {
-    "file": "assets/Index.3298ac1b.js",
+    "file": "assets/Index.0845ec8d.js",
     "src": "Core/Js/Pages/Backend/Index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -4255,7 +4255,7 @@
     ]
   },
   "Core/Js/Pages/GPanel/Index.vue": {
-    "file": "assets/Index.67f4a000.js",
+    "file": "assets/Index.cde4e3d3.js",
     "src": "Core/Js/Pages/GPanel/Index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -4335,7 +4335,7 @@
     ]
   },
   "Core/Js/Pages/Sms/Index.vue": {
-    "file": "assets/Index.37fa019e.js",
+    "file": "assets/Index.0b1f523b.js",
     "src": "Core/Js/Pages/Sms/Index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -5075,7 +5075,7 @@
     ]
   },
   "Core/Js/Pages/Backend/AcaciaMenu/Edit.vue": {
-    "file": "assets/Edit.5ced9792.js",
+    "file": "assets/Edit.4da5f029.js",
     "src": "Core/Js/Pages/Backend/AcaciaMenu/Edit.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -5105,7 +5105,7 @@
     ]
   },
   "Core/Js/Pages/Backend/AcaciaMenu/Index.vue": {
-    "file": "assets/Index.6483afeb.js",
+    "file": "assets/Index.b16c19a2.js",
     "src": "Core/Js/Pages/Backend/AcaciaMenu/Index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -5149,7 +5149,7 @@
     ]
   },
   "Core/Js/Pages/Crm/Customers/Details.vue": {
-    "file": "assets/Details.0882e768.js",
+    "file": "assets/Details.7caac777.js",
     "src": "Core/Js/Pages/Crm/Customers/Details.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -5179,7 +5179,7 @@
     ]
   },
   "Core/Js/Pages/Crm/Customers/Index.vue": {
-    "file": "assets/Index.6c4088ce.js",
+    "file": "assets/Index.165f2ec9.js",
     "src": "Core/Js/Pages/Crm/Customers/Index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -5219,7 +5219,7 @@
     ]
   },
   "Core/Js/Pages/GPanel/Schematics/Manage.vue": {
-    "file": "assets/Manage.8c55ef71.js",
+    "file": "assets/Manage.3ae98ed5.js",
     "src": "Core/Js/Pages/GPanel/Schematics/Manage.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -5318,7 +5318,7 @@
     ]
   },
   "Core/Js/Pages/Sms/Messages/Index.vue": {
-    "file": "assets/Index.cde52de7.js",
+    "file": "assets/Index.4f516e53.js",
     "src": "Core/Js/Pages/Sms/Messages/Index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -5358,7 +5358,7 @@
     ]
   },
   "Core/Js/Pages/Sms/SendingSessions/Index.vue": {
-    "file": "assets/Index.22b40911.js",
+    "file": "assets/Index.84f154b3.js",
     "src": "Core/Js/Pages/Sms/SendingSessions/Index.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -5398,7 +5398,7 @@
     ]
   },
   "Core/Js/Pages/Sms/Templates/Index.vue": {
-    "file": "assets/Index.00ab4141.js",
+    "file": "assets/Index.9eb58d74.js",
     "src": "Core/Js/Pages/Sms/Templates/Index.vue",
     "isDynamicEntry": true,
     "imports": [

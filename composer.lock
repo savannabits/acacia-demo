@@ -4,54 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "3228749fa13a3a4d33b396cd9205229f",
+    "content-hash": "0daa6c59e97b15ffa16c7f68cfceca74",
     "packages": [
-        {
-            "name": "abbyjanke/laracolor",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/AbbyJanke/larecipe-laravel-theme.git",
-                "reference": "0167dda7d90d05ff09afc310d5b77f77c51f2fe1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/AbbyJanke/larecipe-laravel-theme/zipball/0167dda7d90d05ff09afc310d5b77f77c51f2fe1",
-                "reference": "0167dda7d90d05ff09afc310d5b77f77c51f2fe1",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1.0"
-            },
-            "default-branch": true,
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Abbyjanke\\Laracolor\\ThemeServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Abbyjanke\\Laracolor\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "A LaRecipe theme.",
-            "keywords": [
-                "laravel",
-                "larecipe"
-            ],
-            "support": {
-                "issues": "https://github.com/AbbyJanke/larecipe-laravel-theme/issues",
-                "source": "https://github.com/AbbyJanke/larecipe-laravel-theme/tree/master"
-            },
-            "time": "2019-09-20T06:39:32+00:00"
-        },
         {
             "name": "binarytorch/larecipe",
             "version": "dev-l9-compatibility",
@@ -9390,7 +9344,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "abbyjanke/laracolor": 20,
         "binarytorch/larecipe": 20,
         "savannabits/acacia": 10
     },

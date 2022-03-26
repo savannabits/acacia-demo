@@ -16,7 +16,7 @@ return [
     'docs'        => [
         'route'   => '/docs',
         'path'    => '/resources/docs',
-        'landing' => 'overview',
+        'landing' => 'getting-started/overview',
         'middleware' => ['web'],
     ],
 
@@ -33,7 +33,7 @@ return [
     */
 
     'versions'      => [
-        'default'   => '1.0',
+        'default'   => env('DOCS_VERSION','main'),
         'published' => [
             '1.0',
             'main'
@@ -100,7 +100,7 @@ return [
         'default'       => 'internal',
         'engines'       => [
             'internal'  => [
-                'index' => ['h2', 'h3']
+                'index' => ['h1', 'h2', 'h3']
             ],
             'algolia'   => [
                 'key'   => '',
@@ -127,8 +127,8 @@ return [
         'fa_v4_shims'    => true, // Add FontAwesome v4 shims prevent BC break
         'show_side_bar'  => true,
         'colors'         => [
-            'primary'    => '#787AF6',
-            'secondary'  => '#2b9cf2'
+            'primary'    => '#f1511b',
+            'secondary'  => '#286291'
         ],
 
         'theme_order'    => null// ['default', 'laracolor']

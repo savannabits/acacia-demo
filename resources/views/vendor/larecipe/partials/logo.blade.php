@@ -11,4 +11,4 @@
         </g>
     </g>
 </svg>--}}
-<img alt="Savannabits" src="{{asset('img/Savannabits-1500×500px.png')}}" width="200"/>
+<img alt="Savannabits" src="{{asset('img/logo.svg')}}" width="160"/>
