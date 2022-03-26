@@ -4008,16 +4008,16 @@
         },
         {
             "name": "savannabits/acacia",
-            "version": "v1.0.0-beta.6",
+            "version": "v1.0.0-beta.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/savannabits/acacia.git",
-                "reference": "39bd2ad3321729b6f51986762d02c9abef2f2005"
+                "reference": "9de275e0c352b874b672eef2733451284ffd0454"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/savannabits/acacia/zipball/39bd2ad3321729b6f51986762d02c9abef2f2005",
-                "reference": "39bd2ad3321729b6f51986762d02c9abef2f2005",
+                "url": "https://api.github.com/repos/savannabits/acacia/zipball/9de275e0c352b874b672eef2733451284ffd0454",
+                "reference": "9de275e0c352b874b672eef2733451284ffd0454",
                 "shasum": ""
             },
             "require": {
@@ -4088,7 +4088,7 @@
             ],
             "support": {
                 "issues": "https://github.com/savannabits/acacia/issues",
-                "source": "https://github.com/savannabits/acacia/tree/v1.0.0-beta.6"
+                "source": "https://github.com/savannabits/acacia/tree/v1.0.0-beta.8"
             },
             "funding": [
                 {
@@ -4096,7 +4096,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-25T19:23:40+00:00"
+            "time": "2022-03-26T12:54:46+00:00"
         },
         {
             "name": "savannabits/primevue-datatables",

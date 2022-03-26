@@ -5,7 +5,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ url('/') }}">
+                    <a href="{{ route('dashboard') }}">
                         <x-application-logo class="block h-10 w-auto fill-current text-gray-600" />
                     </a>
                 </div>
@@ -15,14 +15,6 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link :href="url('/docs')" :active="request()->routeIs('docs*')">
-                        {{ __('Docs') }}
-                    </x-nav-link>
-                    @if(auth()->user()->can('backend'))
-                    <x-nav-link :href="route('acacia.backend.index')" :active="request()->routeIs('acacia.backend.index')">
-                        {{ __('Backend') }}
-                    </x-nav-link>
-                    @endif
                 </div>
             </div>
 

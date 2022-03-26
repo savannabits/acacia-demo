@@ -24,7 +24,7 @@
                     <div class="flex-col w-full h-auto overflow-hidden bg-white rounded-lg md:bg-transparent md:overflow-visible md:rounded-none md:relative md:flex md:flex-row">
                         <a href="#_" class="inline-flex items-center block w-auto h-16 px-6 text-xl font-black leading-none text-gray-900 md:hidden">acacia<span class="text-red-500">.</span></a>
                         <div class="flex flex-col items-start justify-center w-full space-x-6 text-center lg:space-x-8 md:w-2/3 md:mt-0 md:flex-row md:items-center">
-                            <a href="{{route('dashboard')}}" class="inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-red-500 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center">Home</a>
+                            <a href="{{route('dashboard')}}" class="inline-block w-full py-2 mx-0 ml-6 font-medium text-left text-red-500 md:ml-0 md:w-auto md:px-0 md:mx-2 lg:mx-3 md:text-center">Dashboard</a>
                             <a href="{{url('/docs')}}" class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-red-500 lg:mx-3 md:text-center">Documentation</a>
                             <a href="{{route('acacia.backend.index')}}" class="inline-block w-full py-2 mx-0 font-medium text-left text-gray-700 md:w-auto md:px-0 md:mx-2 hover:text-red-500 lg:mx-3 md:text-center">Demo</a>
                         </div>
