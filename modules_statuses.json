@@ -1,0 +1,10 @@
+{
+    "AcaciaFields": true,
+    "AcaciaMenus": true,
+    "AcaciaRelationships": true,
+    "AcaciaSchematics": true,
+    "Core": true,
+    "Permissions": true,
+    "Roles": true,
+    "Users": true
+}

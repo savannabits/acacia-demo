@@ -1,0 +1,1 @@
+@-webkit-keyframes dash-frame{to{stroke-dashoffset:0}}@keyframes dash-frame{to{stroke-dashoffset:0}}.p-knob-range{fill:none;transition:stroke .1s ease-in}.p-knob-value{-webkit-animation-name:dash-frame;animation-name:dash-frame;-webkit-animation-fill-mode:forwards;animation-fill-mode:forwards;fill:none}.p-knob-text{font-size:1.3rem;text-align:center}
