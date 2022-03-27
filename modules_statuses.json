@@ -6,5 +6,6 @@
     "Core": true,
     "Permissions": true,
     "Roles": true,
-    "Users": true
+    "Users": true,
+    "AlbumTypes": true
 }

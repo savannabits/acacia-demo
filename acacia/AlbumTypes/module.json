@@ -1,0 +1,11 @@
+{
+    "name": "AlbumTypes",
+    "alias": "album-types",
+    "description": "",
+    "keywords": [],
+    "priority": 0,
+    "providers": ["Acacia\\AlbumTypes\\Providers\\AlbumTypesServiceProvider"],
+    "aliases": {},
+    "files": [],
+    "requires": []
+}
