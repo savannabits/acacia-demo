@@ -54,6 +54,8 @@ class AlbumType extends Model
 
     public function toSearchableArray(): array
     {
-        return $this->only($this->getFillable());
+        return collect($this->only($this->getFillable()))
+            ->merge(["id" => $this->getKey()])
+            ->toArray();
     }
 }

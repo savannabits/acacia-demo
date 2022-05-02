@@ -22,7 +22,11 @@
                     <x-nav-link :href="route('acacia.backend.index')" :active="request()->routeIs('acacia.backend.index')">
                         {{ __('Backend') }}
                     </x-nav-link>
+
                     @endif
+                    <x-nav-link :href="url('docs')" :active="request()->is('docs*')">
+                        {{ __('Documentation') }}
+                    </x-nav-link>
                 </div>
             </div>
 

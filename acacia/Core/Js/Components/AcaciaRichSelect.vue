@@ -1,7 +1,7 @@
 <template>
     <v-select
         class="p-input-filled p-inputtext p-inputtext-sm"
-        :model-value="modelValue"
+        :modelValue="modelValue"
         @update:modelValue="onSelect"
         :multiple="multiple"
         :options="paginatedObject.data"

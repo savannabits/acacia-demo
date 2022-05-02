@@ -29,7 +29,7 @@ class AlbumTypesDatabaseSeeder extends Seeder
             \Savannabits\Acacia\Helpers\Permissions::seedPermissions($perms);
         } catch (\Throwable $e) {
             \Log::info($e);
-            abort($e->getMessage());
+            abort(500, $e->getMessage());
         }
 
         // $this->call("OthersTableSeeder");

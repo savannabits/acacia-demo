@@ -45,8 +45,8 @@
 
     <!-- Content -->
     <div class="relative">
-      <h1 class="text-2xl md:text-3xl text-gray-800 font-bold mb-1">Greetings {{ $page.props.auth?.user?.name }}! 👋</h1>
-      <p>Here is a summary of what's happening in your system today:</p>
+      <h1 class="text-2xl md:text-3xl text-gray-800 font-bold mb-1">Hey there! 👋</h1>
+      <p>Welcome to your backend, powered by Acacia. You can replace this page with all the analytics widgets you can dream of. Just keep it clean and simple.</p>
     </div>
 
   </div>

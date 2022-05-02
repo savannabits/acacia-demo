@@ -1,5 +1,8 @@
 <template>
-    <form v-if="$page.props.can?.create" @submit.prevent="createModel">
+    <form
+        v-if="$page.props.userCan?.createAlbumType"
+        @submit.prevent="createModel"
+    >
         <div class="">
             <div class="my-2">
                 <label>Slug</label>

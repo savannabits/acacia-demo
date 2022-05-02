@@ -8,17 +8,17 @@
         </template>
         <div class="mx-auto flex container items-center justify-center mt-4">
             <div class="rounded w-full p-2 bg-white">
-                <div class="flex flex-wrap items-center justify-end gap-2">
+                <div class="flex mb-2 flex-wrap items-center justify-end gap-2">
                     <Button
-                        v-if="$page.props.can?.create"
+                        v-if="$page.props.userCan?.createAlbumType"
                         @click="createModal = true"
-                        aria-label="New Comment"
+                        aria-label="New Album Type"
                         label="New Album Type"
                         icon="pi pi-plus"
                     />
                 </div>
                 <PrimeDatatables
-                    v-if="$page.props.can?.viewAny"
+                    v-if="$page.props.userCan?.viewAnyAlbumType"
                     :apiUrl="apiUrl"
                     :columnFilters="{}"
                     :searchableColumns="searchableCols"
@@ -103,7 +103,7 @@
                 '960px': '75vw',
                 '540px': '100vw',
             }"
-            :style="{ width: '35vw' }"
+            :style="{ width: '50vw' }"
         >
             <template #header>
                 <h4 class="font-black text-xl">New Album Type</h4>
@@ -138,7 +138,7 @@
                 '960px': '75vw',
                 '540px': '100vw',
             }"
-            :style="{ width: '35vw' }"
+            :style="{ width: '50vw' }"
         >
             <template #header>
                 <h4 class="font-black text-xl">Album Type Details</h4>
@@ -176,7 +176,7 @@
                 '960px': '75vw',
                 '540px': '100vw',
             }"
-            :style="{ width: '35vw' }"
+            :style="{ width: '50vw' }"
         >
             <template #header>
                 <h4 class="font-black text-xl">Edit Single Album Type</h4>
@@ -234,9 +234,9 @@ import { useToast } from "primevue/usetoast";
 import { Inertia } from "@inertiajs/inertia";
 import axios from "axios";
 import Dialog from "primevue/dialog";
-import CreateForm from "./Partials/CreateForm.vue";
-import EditForm from "./Partials/EditForm.vue";
-import ShowForm from "./Partials/ShowForm.vue";
+import CreateForm from "@Acacia/AlbumTypes/Js/Pages/Partials/CreateForm.vue";
+import EditForm from "@Acacia/AlbumTypes/Js/Pages/Partials/EditForm.vue";
+import ShowForm from "@Acacia/AlbumTypes/Js/Pages/Partials/ShowForm.vue";
 import Message from "primevue/message";
 
 const apiUrl = route("api.v1.album-types.dt");

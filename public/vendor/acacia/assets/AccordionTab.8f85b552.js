@@ -1,1 +1,0 @@
-import{_ as r}from"./plugin-vue_export-helper.21dcd24c.js";import{q as o}from"./vendor.05df324e.js";const a={name:"AccordionTab",props:{header:null,disabled:Boolean}};function n(e,s,d,t,c,p){return o(e.$slots,"default")}var i=r(a,[["render",n]]);export{i as default};

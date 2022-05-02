@@ -1,1 +1,0 @@
-import{_ as r}from"./plugin-vue_export-helper.21dcd24c.js";import{i as o,q as a,o as t}from"./vendor.05df324e.js";const s={name:"AvatarGroup"},p={class:"p-avatar-group p-component"};function n(e,_,c,d,u,l){return t(),o("div",p,[a(e.$slots,"default")])}var f=r(s,[["render",n]]);export{f as default};

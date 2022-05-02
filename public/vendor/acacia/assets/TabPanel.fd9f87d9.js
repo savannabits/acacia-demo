@@ -1,1 +1,0 @@
-import{_ as r}from"./plugin-vue_export-helper.21dcd24c.js";import{q as a}from"./vendor.05df324e.js";const o={name:"TabPanel",props:{header:null,disabled:Boolean}};function n(e,s,t,d,p,l){return a(e.$slots,"default")}var _=r(o,[["render",n]]);export{_ as default};

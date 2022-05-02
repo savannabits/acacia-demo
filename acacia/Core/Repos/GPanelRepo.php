@@ -13,6 +13,7 @@ use Doctrine\DBAL\Schema\Index;
 use Illuminate\Console\Command;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
+use Savannabits\Acacia\Helpers\ColumnsReader;
 use Symfony\Component\Console\Logger\ConsoleLogger;
 
 class GPanelRepo
@@ -89,7 +90,7 @@ class GPanelRepo
                 $field->title = \Str::replace("_"," ",\Str::title($key));
                 $field->name = $key;
                 $field->db_type = $column->getType()->getName();
-                $field->html_type = get_default_html_field($column->getType()->getName());
+                $field->html_type = get_default_html_field($column->getType()->getName(), $column->getName());
                 $field->has_options = false;
                 $field->is_guarded = in_array($column->getName(),["id","password","username","created_at","updated_at"]);
                 $field->is_vue = true;
@@ -99,7 +100,7 @@ class GPanelRepo
                 $field->saveOrFail();
 
                 // Make Server side validation:
-                $field->server_validation = static::makeServerValidation($field, $column);
+                $field->server_validation = static::makeServerValidation($field, $column, $tableName, $schematic->model_class);
                 $field->saveOrFail();
 
             }
@@ -139,7 +140,7 @@ class GPanelRepo
                 }
                 $rel->saveOrFail();
                 $column = collect($columnListing)->get($rel->local_key);
-                $rel->server_validation = self::makeServerValidation(self::relationshipToField($rel),$column);
+                $rel->server_validation = self::makeServerValidation(self::relationshipToField($rel),$column,$tableName,$schematic->model_class);
                 $rel->saveOrFail();
             }
             // Add Morph relationships
@@ -162,8 +163,15 @@ class GPanelRepo
         });
         return $schematic;
     }
-    private static function makeServerValidation(Field $field, Column $column): string
+    private static function makeServerValidation(Field $field, Column $column, ?string $tableName, ?string $modelClass): string
     {
+        $reader = ColumnsReader::init($tableName);
+        $modelVariableName = Str::camel($modelClass);
+        $uniqueIndexes = $reader->getColumnUniqueIndexes($column->getName());
+        $columns = $reader->getColumns();
+        $filtered = $columns->filter(function($col) {
+            return !($col['name'] == "id" || $col['name'] == "created_at" || $col['name'] == "updated_at" || $col['name'] == "deleted_at" || $col['name'] == "remember_token");
+        });
         $validation = collect(['store' =>collect(),'update' => collect(),'index' => collect()]);
         if ($column->getNotnull()) {
             $validation->get('store')->push('required');
@@ -172,16 +180,93 @@ class GPanelRepo
             $validation->get("store")->push('nullable');
             $validation->get("update")->push('nullable');
         }
+
+        // TODO: Add any other commonly used field names for email
+        if (in_array($column->getName(),['email','email_address','secondary_email','work_email','e_mail','contact_email'])) {
+            $validation->get('store')->push('email');
+            $validation->get('update')->push('email');
+        }
+        if ($column->getName() ==='slug') {
+            $validation->get('store')->merge(['unique']);
+            $validation->get('update')->merge(['unique']);
+        }
+        if ($reader->isUnique($column->getName())){
+            if($column->getType() === 'json') {
+                if ($reader->getColumnUniqueIndexes($column->getName())->count() == 1) {
+                    $storeRule = 'Rule::unique(\''.$tableName.'\', \''.$column->getName().'->\'.$locale)';
+                    $updateRule = 'Rule::unique(\''.$tableName.'\', \''.$column->getName().'->\'.$locale)->ignore($this->'.$modelVariableName.'->getKey(), $this->'.$modelVariableName.'->getKeyName())';
+                    $cols = $uniqueIndexes->first()->getColumns();
+                    if (count($cols) > 1) {
+                        $otherCols = collect($cols)->reject(function ($col) use ($column) { return $col ===$column->getName();});
+                        foreach ($otherCols as $otherCol) {
+                            $storeRule .= '->where('.$otherCol.',$this->'.$otherCol.')';
+                            $updateRule .= '->where('.$otherCol.',$this->'.$otherCol.')';
+                        }
+                    }
+                    $validation->get('store')->push($storeRule);
+                    $validation->get('update')->push($updateRule);
+                }
+            } else {
+                if ($uniqueIndexes->count() == 1) {
+                    $storeRule = 'Rule::unique(\''.$tableName.'\', \''.$column->getName().'\')';
+                    $updateRule = 'Rule::unique(\''.$tableName.'\', \''.$column->getName().'\')';
+
+                    $cols = $uniqueIndexes->first()->getColumns();
+                    if (count($cols) > 1) {
+                        $otherCols = collect($cols)->reject(function ($col) use ($column) { return $col ===$column->getName();});
+                        foreach ($otherCols as $otherCol) {
+                            if ($filtered->keyBy("name")->has($otherCol)) {
+                                $otherRel = $otherCol;
+                                $otherKey = '';
+                            }/* elseif ($relationships->keyBy("name")->has($otherCol)) {
+                                $otherRel = $relationships->get($otherCol)['relationship_variable'];
+                                $ownerKey = $relationships->get($otherCol)["owner_key"];
+                                $otherKey = $ownerKey;
+                            }*/ else {
+                                $otherRel = null;
+                                $otherKey = null;
+                            }
+                            if ($otherRel) {
+                                if ($otherKey) {
+                                    $where = 'collect($this->'.$otherRel.')->get(\''.$otherKey.'\')';
+                                } else {
+                                    $where = $otherRel;
+                                }
+                                $storeRule .= '->where("'.$otherCol.'", $this->'.$where.')';
+                                $updateRule .= '->where("'.$otherCol.'",$this->'.$where.')';
+
+                            }
+                        }
+                    }
+                    $updateRule .= '->ignore($this->'.$modelVariableName.'->getKey(), $this->'.$modelVariableName.'->getKeyName())';
+                    $validation->get('store')->push($storeRule);
+                    $validation->get('update')->push($updateRule);
+                }
+            }
+        }
+
+
+
         $otherRules = match ($field->db_type) {
             "integer","int" => "integer",
             "float","double" => "numeric",
             "boolean","bool","tinyint", => "boolean",
             "json","longtext","relationship" => "array",
             "date","datetime","timestamp" => "date",
-            default => 'string'
+            default => 'string',
         };
-        $validation->get('store')->push($otherRules);
-        $validation->get('update')->push($otherRules);
+
+        if (in_array($column->getName(),['password','user_password'])) {
+            $validation->get('store')
+                ->push('confirmed')
+                ->push('Password::min(8)->mixedCase()->numbers()->symbols()');
+            $validation->get('update')
+                ->push('confirmed')
+                ->push('Illuminate\Validation\Rules\Password::min(8)->mixedCase()->numbers()->symbols()');
+        } else {
+            $validation->get('store')->push($otherRules);
+            $validation->get('update')->push($otherRules);
+        }
 
         return $validation->toJson();
     }

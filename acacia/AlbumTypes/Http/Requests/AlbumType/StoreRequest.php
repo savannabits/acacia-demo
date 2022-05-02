@@ -4,6 +4,8 @@ namespace Acacia\AlbumTypes\Http\Requests\AlbumType;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Acacia\AlbumTypes\Models\AlbumType;
+use Illuminate\Validation\Rule;
+use Illuminate\Validation\Rules\Password;
 class StoreRequest extends FormRequest
 {
     /**
@@ -14,8 +16,16 @@ class StoreRequest extends FormRequest
     public function rules(): array
     {
         return [
-            "slug" => ["required", "string"],
-            "name" => ["required", "string"],
+            "slug" => [
+                "required",
+                Rule::unique("album_types", "slug"),
+                "string",
+            ],
+            "name" => [
+                "required",
+                Rule::unique("album_types", "name"),
+                "string",
+            ],
             "description" => ["nullable", "string"],
             "active" => ["required", "boolean"],
         ];

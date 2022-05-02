@@ -4,6 +4,8 @@ namespace Acacia\AlbumTypes\Http\Requests\AlbumType;
 
 use Illuminate\Foundation\Http\FormRequest;
 use Acacia\AlbumTypes\Models\AlbumType;
+use Illuminate\Validation\Rule;
+use Illuminate\Validation\Rules\Password;
 class ViewRequest extends FormRequest
 {
     /**

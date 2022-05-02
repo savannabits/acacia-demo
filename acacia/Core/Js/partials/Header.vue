@@ -1,5 +1,5 @@
 <template>
-  <header class="sticky top-0 bg-indigo-200 border-b border-gray-200 z-30">
+  <header class="sticky top-0 bg-primary-300 border-b border-gray-200 z-30">
     <div class="px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16 -mb-px">
 
@@ -15,11 +15,13 @@
               <rect x="4" y="17" width="16" height="2" />
             </svg>
           </button>
+            <a :href="route('dashboard')" class="py-3 mx-2"><i class="pi pi-home mr-2"></i> Home</a>
+            <a :href="'/docs'" class="py-3 mx-2"><i class="pi pi-book mr-2"></i> Documentation</a>
 
         </div>
 
         <!-- Header: Right side -->
-        <div class="flex items-center space-x-3">
+        <div class="flex items-center space-x-3"> 
 
           <button
             class="w-8 h-8 flex items-center justify-center bg-gray-100 hover:bg-gray-200 transition duration-150 rounded-full ml-3"
